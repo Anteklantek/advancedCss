@@ -1,0 +1,101 @@
+$topright-paddgin-side: 58px;
+$column-padding: 12px;
+$colors: red, orange, yellow;
+
+.column {
+	background-color: beige;
+	border: 2px solid black;
+	padding-left: $column-padding;
+	padding-right: $column-padding;
+	padding-left: $column-padding;
+	padding-right: $column-padding;
+	padding-top: 102px;
+	padding-bottom: 12px;
+	font-size: 16px;
+	position: relative;
+}
+
+.container-fluid{
+	margin: 15px;
+}
+
+.page-header {
+	font-size: 32px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+footer {
+    background-color: beige;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+	border: 2px solid black;
+	text-align: center;
+}
+
+body {
+    margin: 0 0 100px;
+    /* bottom = footer height */
+    padding: 0 0 25px;
+}
+
+.topright {
+	font-size: 24px;
+	position: absolute;
+    top: 0px;
+	padding-top: 8px;
+    right: 0px;
+    font-size: 18px;
+    border-left: 2px solid black;
+	border-bottom: 2px solid black;
+	padding-right: $topright-paddgin-side;
+	padding-left: $topright-paddgin-side;
+}
+
+.color1 {
+	background-color: nth($colors, 1);
+}
+.color2 {
+	background-color: nth($colors, 2);
+}
+.color3 {
+	background-color: nth($colors, 3);
+}
+
+@media (max-width: 1199px) { 
+  [class*="col-"]:not(:first-child){
+      margin-top: 30px;
+  }
+}
+
+p.small {
+    line-height: 0.7;
+}
+
+.content {
+        width: 400px;
+        height: 80px;
+        background-color: beige;
+
+        position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:0; bottom:0;
+        margin:auto;
+
+        /*this to solve "the content will not be cut when the window is smaller than the content": */
+        max-width:100%;
+        max-height:100%;
+        overflow:auto;
+    }
+	
+li{
+  margin-right: 10px;
+}
